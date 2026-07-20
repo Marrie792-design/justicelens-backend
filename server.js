@@ -39,5 +39,11 @@ app.post('/api/send-email', async (req, res) => {
 });
 
 
+// Test route (Health Check)
+app.get('/', (req, res) => {
+    res.send("JusticeLens Backend is Running Successfully!");
+});
+
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
